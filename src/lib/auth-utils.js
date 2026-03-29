@@ -69,3 +69,8 @@ export const clearAuth = () => {
     localStorage.removeItem("authToken");
   }
 };
+
+// Backward-compatible alias used by existing components
+export const removeAuthToken = () => {
+  clearAuth();
+};

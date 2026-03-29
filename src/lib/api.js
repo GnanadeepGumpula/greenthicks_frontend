@@ -816,6 +816,11 @@ export const getDeliveryOrders = async (page = 1, limit = 50) => {
   return fetchWithAuth(`/api/delivery?page=${page}&limit=${limit}`)
 }
 
+// getDeliveryOrderById function - get a delivery order by ID
+export const getDeliveryOrderById = async (globalId) => {
+  return fetchWithAuth(`/api/delivery/${globalId}`)
+}
+
 // assignDeliveryBoy function - assign delivery boy to order
 export const assignDeliveryBoy = async (globalId, deliveryBoyId) => {
   return fetchWithAuth(`/api/delivery/${globalId}/assign`, {
